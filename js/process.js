@@ -4,7 +4,7 @@ $(document).ready(function () {
     loadMac();
 
     // 备用下载链接地址（你可以在这里修改备用地址）
-    const backupUrl = "/backup.html";
+    const backupUrl = "/links.html";
 
     // 设置备用链接地址
     const backupLink = document.getElementById('backupLink');

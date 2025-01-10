@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .link-container {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex; /* 将内容分成独立的区域 */
+      flex-direction: column;
+    }
+
+    .link {
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+      display: inline-block;
+      word-wrap: break-word;
+      margin-bottom: 5px; /* 分隔链接和密码 */
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    .password-container {
+      user-select: text; /* 确保密码可被选中 */
+    }
+
+    .password {
+      font-style: normal;
+      color: #555;
+      background-color: #f8f8f8;
+      padding: 3px 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Link Viewer</h1>
+    <p>Easily view and copy your links with passwords</p>
+  </header>
+
+  <div class="content" id="content">
+    Loading...
+  </div>
+
+  <footer>
+    <p>&copy; 2025 <a href="#">Your Website</a>. All rights reserved.</p>
+  </footer>
+
+  <script src="js/links.js"></script>
+</body>
+</html>
