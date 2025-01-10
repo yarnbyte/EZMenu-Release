@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EZMenu Download Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+    #content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .link {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+    .link:hover {
+      background: #333;
+      color: white;
+    }
+    .error {
+      color: red;
+      text-align: center;
+    }
+    #back {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #back a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Download Links</h1>
+  <div id="back">
+    <a href="index.html">Back to EZMenu</a>
+    </div>
+  <div id="content">
+    <p>Loading content...</p>
+  </div>
+
+  <script>
+    // URL of the txt file to be fetched
+    const txtFileUrl = "/link.txt"; // Replace with the actual URL of your .txt file
+
+    // Function to fetch and display the content
+    function fetchAndDisplayTxt() {
+      fetch(txtFileUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          const contentDiv = document.getElementById("content");
+          contentDiv.innerHTML = ""; // Clear loading message
+
+          // Split the file content into lines
+          const lines = data.split("\n").filter(line => line.trim() !== ""); // Remove empty lines
+          lines.forEach((line, index) => {
+            // Create an <a> tag for each link
+            const link = document.createElement("a");
+            link.className = "link";
+            link.href = line.trim(); // Set the href to the line content
+            link.target = "_blank"; // Open link in a new tab
+            link.textContent = `Link ${index + 1}: ${line.trim()}`; // Display the line content with a label
+            contentDiv.appendChild(link);
+          });
+        })
+        .catch(error => {
+          const contentDiv = document.getElementById("content");
+          contentDiv.innerHTML = `<p class="error">Error loading content: ${error.message}</p>`;
+        });
+    }
+
+    // Call the function to fetch and display the TXT file content
+    fetchAndDisplayTxt();
+  </script>
+</body>
+</html>
