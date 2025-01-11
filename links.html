@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link Viewer</title>
+  <title>Download Links</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,7 +46,7 @@
       padding: 10px;
       border-bottom: 1px solid #ddd;
       display: flex; /* 将内容分成独立的区域 */
-      flex-direction: column;
+      flex-direction: row;
     }
 
     .link {
@@ -64,6 +64,7 @@
 
     .password-container {
       user-select: text; /* 确保密码可被选中 */
+      margin-left: 15px;
     }
 
     .password {
@@ -103,8 +104,8 @@
 </head>
 <body>
   <header>
-    <h1>Link Viewer</h1>
-    <p>Easily view and copy your links with passwords</p>
+    <h1>Download Links</h1>
+    <p>The following links can also be downloaded.</p>
     <a href="index.html" style="color: #d8d8d8; text-decoration: none;">Back to Home</a>
   </header>
 

@@ -49,15 +49,21 @@
     <section class="download">
       <h2>立即开始使用 EZMenu</h2>
       <p>立即下载 EZMenu，节省更多时间和精力！</p>
-      <a id="downloadWin" target="_blank">下载 Windows 版</a>
-      <a id="downloadMac" target="_blank">下载 macOS 版</a>
+      <div class="download-buttons">
+        <div class="download-button">
+          <a id="downloadWin" target="_blank">下载 Windows 版 <span class="version-text" id="win_version"></span></a>
+          <span>Supports Windows 7+</span>
+        </div>
+        <div class="download-button">
+          <a id="downloadMac" target="_blank">下载 macOS 版 <span class="version-text" id="mac_version"></span></a>
+          <span>Supports Mac OSX 10.12+</span>
+      </div>
     </section>
 
     <!-- 备用下载链接 -->
     <div style="text-align: center; margin-top: 20px;">
       <p>如果以上下载链接无法使用，请尝试以下备用链接：</p>
-      <a id="backupLink" href="#"
-        style="display: inline-block; padding: 10px 20px; color: white; background-color: #555; text-decoration: none; border-radius: 5px;">备用下载链接</a>
+      <a id="backupLink" href="#" class="backup-link">备用下载链接</a>
     </div>
   </div>
 

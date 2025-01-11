@@ -20,7 +20,7 @@ function loadWin() {
             const version = data.version;
             const downloadUrl = data.files[0].url;
             $('#downloadWin').attr('href', releaseUrl + downloadUrl);
-            $('#downloadWin').text('下载 Windows 版 v' + version);
+            $('#win_version').text('v' + version);
         })
         .catch(error => {
             console.error('Error fetching YAML:', error);
@@ -38,7 +38,7 @@ function loadMac() {
             files.forEach(file => {
                 if (file.url.includes('dmg')) {
                     $('#downloadMac').attr('href', releaseUrl + file.url);
-                    $('#downloadMac').text('下载 macOS 版 v' + version);
+                    $('#mac_version').text('v' + version);
                 }
             });
         })

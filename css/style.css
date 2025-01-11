@@ -59,18 +59,46 @@ header p {
     margin: 40px 0;
 }
 
-.download a {
+.download-button {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
+}
+
+.backup-link {
+    display: inline-block;
+    padding: 10px 20px;
     color: white;
     background-color: #333;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.download a:hover {
+.backup-link:hover {
     background-color: #555;
+}
+
+.download-button a {
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 25px;
+}
+
+.download-button span {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.download-button a:hover {
+    background-color: #555;
+}
+
+.version-text {
+    display: inline !important;
 }
 
 footer {
