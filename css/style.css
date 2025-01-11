@@ -145,13 +145,3 @@ footer a:hover {
     color: #333;
     margin-bottom: 20px;
 }
-
-
-/* PC端的footer样式 */
-@media (min-width: 768px) {
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-}
